@@ -27,7 +27,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Build and Push Docker Images
       run: |
-       docker build . --file ./sendresults/Dockerfile -t ${{ secrets.DOCKERHUB_USERNAME }}/reviewerscope/reviewerscope-repo:latest
+       docker build . --file ./sendresults/Dockerfile -t /reviewerscope-repo:latest
        
     -
       name: Set up Docker Buildx
@@ -46,5 +46,5 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/reviewerscope/reviewerscope-repo:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/reviewerscope-repo:latest
    
