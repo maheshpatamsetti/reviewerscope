@@ -46,5 +46,5 @@ jobs:
         context: ./
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/reviewerscope/reviewerscope-repo:sendresultsserviceimga9f0187a:latest
+        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/reviewerscope/reviewerscope-repo:sendresultsserviceimga9f0187a
    
